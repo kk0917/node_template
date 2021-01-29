@@ -1,0 +1,45 @@
+name: Node CI
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+    - name: Build Node ${{ matrix.node-version }}
+    - uses: actions/checkout@v2
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: yarn build # TODO: update
+
+  lint:
+    - name: lint.js
+    - uses: ...
+    - run: # TODO: write
+
+  formatting:
+    - name: test_format.js
+    - uses: ...
+    - run: # TODO: write
+
+  test:
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+    - name: Test Node ${{ matrix.deno-version }}
+    - uses: # TODO: write
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: # TODO: write
