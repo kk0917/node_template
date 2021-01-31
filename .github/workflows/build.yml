@@ -1,4 +1,4 @@
-name: Node CI
+name: Node Build
 
 on:
   push:
@@ -15,10 +15,10 @@ jobs:
         node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
-    - name: Build Node ${{ matrix.node-version }}
-    - uses: actions/checkout@v2
-      run: yarn install
-    - uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn build
+      - name: Build Node ${{ matrix.node-version }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install -g bats
+      - run: bats -v
