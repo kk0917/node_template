@@ -39,26 +39,6 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   },
-  "jest": {
-    "modulePaths": [
-      "/shared/vendor/modules"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "ts"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "shared"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
-      "^react(.*)$": "<rootDir>/vendor/react-master$1",
-      "^config$": "<rootDir>/configs/app-config.js"
-    }
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
