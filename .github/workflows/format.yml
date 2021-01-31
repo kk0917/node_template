@@ -10,13 +10,9 @@ jobs:
   formatting:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 15.x]
-
     steps:
       - name: format - Prettify code
-      - uses: creyD/prettier_action@v3.1
+        uses: creyD/prettier_action@v3.1
         # with:
           # This part is also where you can pass other options, for example:
           # prettier_options: --write **/*.{js,ts,md}
