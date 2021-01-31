@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: checkout ${{ matrix.node-version }}
         uses: actions/checkout@v2
-      - name: setup
+      - name: Setup
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
