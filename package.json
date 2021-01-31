@@ -45,7 +45,7 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.ts": "eslint --fix"
   },
   "dependencies": {
     "mini.css": "^3.0.1"
