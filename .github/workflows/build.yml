@@ -17,12 +17,10 @@ jobs:
     steps:
       - name: checkout ${{ matrix.node-version }}
         uses: actions/checkout@v2
-      - name: yarn install
-        run: yarn install
       - name: Setup
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: yarn add bats
-        run: yarn global add bats
+      - name: Build
+        run: npm install -g bats
       - run: bats -v
