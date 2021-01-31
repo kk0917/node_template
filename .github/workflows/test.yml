@@ -22,4 +22,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Test
-        uses: onichandame/node-test-action@master
+        run: npm test
