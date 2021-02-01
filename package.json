@@ -10,7 +10,7 @@
     "test": "npx jest --coverage",
     "lint": "eslint --ext .ts, .tsx ",
     "build": "webpack --config webpack.prod.js",
-    "!!notification!!": "!!Webpack-cli version must be 3.3.12 or lower for the following webpack-dev-server commands to work. After v4 need using 'webpack-cli serve --mode development' instead of its command!!",
+    "!!warning!!": "!!Webpack-cli version must be 3.3.12 or lower for the following webpack-dev-server commands to work. After v4 need using 'webpack-cli serve --mode development' instead of its command!!",
     "start": "npx webpack-dev-server --config webpack.dev.js",
     "start:prod": "npx webpack-dev-server --config webpack.prod.js",
     "jsdoc": "npx documentation build -f md ./client/src/main.js | npx add-text-to-markdown README.md --section \"Usage\" --write"
